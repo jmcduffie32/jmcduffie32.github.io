@@ -1,0 +1,63 @@
+@font-face {
+	font-family: robot;
+	src: url(font/HUMANOID.TTF);
+}
+
+.nav li {
+	display: inline;
+}
+
+h1 {
+	font-family:robot;
+}
+
+.jumbotron {
+	height: 400px;
+	background-image:url('/res/images/hubble.jpg');
+	margin-bottom: 0px;
+}
+
+.jumbotron .container {
+	position: relative;
+	top:50px;
+}
+
+.jumbotron h1 {
+	color:#fff;
+	font-size:48px;
+	font-weight:bold;
+	font-family: 'Shift', sans-serif;
+}
+
+.jumbotron p {
+	font-size: 20px;
+	color:#fff;	
+}
+
+.subject-panes {
+	background-color:#efefef;
+	border-bottom:1px solid #dbdbdb;
+}
+
+.nav a {
+	color: #5a5a5a;
+	font-size:11;
+	font-weight:bold;
+	padding: 14px 10px;
+	text-transform: uppercase;
+}
+
+footer {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+#softRobot {
+	
+	border:#000000 1px solid;
+	border-radius:10px;
+}
