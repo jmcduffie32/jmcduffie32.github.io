@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>My First Post</title>
+      <title>Setting up Hugo and asciidoc</title>
       <link>https://jmcduffie32.github.io/blog/posts/my-first-post/</link>
       <pubDate>Tue, 28 Jan 2020 19:07:04 -0500</pubDate>
       
       <guid>https://jmcduffie32.github.io/blog/posts/my-first-post/</guid>
-      <description>Hello World</description>
+      <description>This was surprisingly easy. All I had to do was make sure the asciidoctor gem was installed and use .adoc as the file extension. Hugo already supports asciidoc; one thing I did find confusing, was that if I wanted to run asciidoctor from the command line on one of the Hugo files it would fail. Turns out you have to pass -a skip-front-matter to asciidoctor to tell it to strip out the front matter section that Hugo uses.</description>
     </item>
     
   </channel>

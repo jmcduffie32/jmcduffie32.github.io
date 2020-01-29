@@ -14,7 +14,7 @@
 
     
     
-      <link href="/blog/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+      <link href="/blog/dist/css/app.3186cf0d1b8a75a43d846af360a0e324.css" rel="stylesheet">
     
 
     
@@ -123,11 +123,11 @@
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="https://jmcduffie32.github.io/blog/posts/my-first-post/" class="color-inherit dim link">
-            My First Post
+            Setting up Hugo and asciidoc
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Hello World
+          This was surprisingly easy. All I had to do was make sure the asciidoctor gem was installed and use .adoc as the file extension. Hugo already supports asciidoc; one thing I did find confusing, was that if I wanted to run asciidoctor from the command line on one of the Hugo files it would fail. Turns out you have to pass -a skip-front-matter to asciidoctor to tell it to strip out the front matter section that Hugo uses.
         </div>
           <a href="https://jmcduffie32.github.io/blog/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
