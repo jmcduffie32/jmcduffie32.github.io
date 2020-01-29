@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JRMcDuffie</title>
-    <link>http://example.org/</link>
+    <link>https://jmcduffie32.github.io/blog/</link>
     <description>Recent content on JRMcDuffie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jan 2020 19:07:04 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jmcduffie32.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <link>https://jmcduffie32.github.io/blog/posts/my-first-post/</link>
       <pubDate>Tue, 28 Jan 2020 19:07:04 -0500</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
+      <guid>https://jmcduffie32.github.io/blog/posts/my-first-post/</guid>
       <description>Hello World</description>
     </item>
     
