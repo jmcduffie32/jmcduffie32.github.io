@@ -24,14 +24,14 @@
 
   <link rel="stylesheet"
         href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic'
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic'
         rel='stylesheet'
         type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700'
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,700'
         rel='stylesheet'
         type='text/css'>
 
-  <script src="assets/js/Chart.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
 </head>
 
@@ -290,129 +290,86 @@
         <div class="col-lg-1 col-lg-offset-1">
           <h5>SKILLS</h5>
         </div>
-        <div class="col-lg-3 centered">
-          <canvas id="javascript"
-                  height="130"
-                  width="130"></canvas>
-          <p>Javascript</p>
-          <br>
+        <div class="col-lg-12">
+          <canvas id="skillChart"
+                  width="200"
+                  height="200"></canvas>
           <script>
-            var doughnutData = [
-              {
-                value: 80,
-                color: "#1abc9c"
-              },
-              {
-                value: 20,
-                color: "#ecf0f1"
-              }
+            const canvas = document.getElementById('skillChart');
+            canvas.style.backgroundColor = '#fff';
+            const skills = [
+              // {name: 'Communication', level: 100 },
+              // {name: 'Problem Solving', level: 100 },
+              {name: 'javaScript', level: 100 },
+              {name: 'TypeScript', level: 100 },
+              {name: 'HTML/CSS (SASS)', level: 100 },
+              {name: 'Angular', level: 100 },
+              {name: 'Stencil', level: 100 },
+              {name: 'Vue', level: 80 },
+              {name: 'Python', level: 60 },
+              {name: 'React', level: 40 },
+              {name: 'ClojureScript', level: 40 },
             ];
-            var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-          </script>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="html"
-                  height="130"
-                  width="130"></canvas>
-          <p>HTML/CSS</p>
-          <br>
-          <script>
-            var doughnutData = [
-              {
-                value: 80,
-                color: "#1abc9c"
-              },
-              {
-                value: 20,
-                color: "#ecf0f1"
-              }
-            ];
-            var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
-          </script>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="rails"
-                  height="130"
-                  width="130"></canvas>
-          <p>Ruby on Rails</p>
-          <br>
-          <script>
-            var doughnutData = [
-              {
-                value: 70,
-                color: "#1abc9c"
-              },
-              {
-                value: 30,
-                color: "#ecf0f1"
-              }
-            ];
-            var myDoughnut = new Chart(document.getElementById("rails").getContext("2d")).Doughnut(doughnutData);
-          </script>
-        </div>
 
-        <div class="col-lg-3 col-lg-offset-2 centered">
-          <canvas id="jQuery"
-                  height="130"
-                  width="130"></canvas>
-          <p>jQuery</p>
-          <br>
-          <script>
-            var doughnutData = [
-              {
-                value: 75,
-                color: "#1abc9c"
+            skillLevels = {
+              20: 'Read the Docs',
+              40: 'Used In Side Projects',
+              60: 'Used for Scripts at Job',
+              80: 'Used In Prodcution App',
+              100: 'Production Code with 10k+ daily Users',
+              110: 'The Best There Ever Was',
+            }
+            const myChart = new Chart(canvas, {
+              type: 'bar',
+              data: {
+                labels: skills.map(s => s.name),
+                datasets: [{
+                  label: null,
+                  data: skills.map(s => s.level),
+                  backgroundColor: [
+                    '#003f5c',
+                    '#2f4b7c',
+                    '#665191',
+                    '#a05195',
+                    '#d45087',
+                    '#f95d6a',
+                    '#ff7c43',
+                    '#ffa600',
+                    '#003f5c',
+                    '#2f4b7c',
+                    '#665191',
+                  ],
+                }]
               },
-              {
-                value: 25,
-                color: "#ecf0f1"
+              options: {
+                layout: {
+                  padding: {
+                    left: 30,
+                    right: 30,
+                    top: 30,
+                    bottom: 30 
+                  }
+                },
+                legend: {
+                  display: false
+                },
+                scales: {
+                  yAxes: [{
+                    ticks: {
+                      beginAtZero: true,
+                      callback: function(value, index, values) {
+                        return skillLevels[value];
+                      },
+                      max: 110
+                    }
+                  }]
+                }
               }
-            ];
-            var myDoughnut = new Chart(document.getElementById("jQuery").getContext("2d")).Doughnut(doughnutData);
+            });
           </script>
         </div>
-        <div class="col-lg-3 centered">
-          <canvas id="CoffeeScript"
-                  height="130"
-                  width="130"></canvas>
-          <p>CoffeeScript</p>
-          <br>
-          <script>
-            var doughnutData = [
-              {
-                value: 80,
-                color: "#1abc9c"
-              },
-              {
-                value: 20,
-                color: "#ecf0f1"
-              }
-            ];
-            var myDoughnut = new Chart(document.getElementById("CoffeeScript").getContext("2d")).Doughnut(doughnutData);
-          </script>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="problemSolving"
-                  height="130"
-                  width="130"></canvas>
-          <p>Problem Solving</p>
-          <br>
-          <script>
-            var doughnutData = [
-              {
-                value: 100,
-                color: "#1abc9c"
-              },
-              {
-                value: 0,
-                color: "#ecf0f1"
-              }
-            ];
-            var myDoughnut = new Chart(document.getElementById("problemSolving").getContext("2d")).Doughnut(doughnutData);
-          </script>
-        </div>
-
       </div>
+
       <!--/.row -->
       <br>
     </div>
