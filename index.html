@@ -81,9 +81,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
-          <img class='img-responsive'
-               src="assets/img/programmer.png"
-               alt="Programmer sitting at a desk" />
+          <picture>
+            <source srcset="assets/img/programmer.webp"
+                    type="image/webp">
+            <source srcset="assets/img/programmer.png"
+                    type="image/png">
+            <img class='img-responsive'
+                 src="assets/img/programmer.png"
+                 alt="Programmer sitting at a desk" />
+          </picture>
         </div>
         <div class="col-lg-7"
              id="tagline">
@@ -379,11 +385,21 @@
 
       <div class="row">
         <div class="col-lg-5 col-lg-offset-2">
-          <p><a href="https://books.jrmcduffie.com"><img class="img-responsive"
-                   src="assets/img/book_shelf.png"
-                   alt="Screenshot of the book shelf page. shows a list of books from the library"></a></p>
-        </div>
-        <div class="col-lg-3">
+          <p>
+            <a href="https://books.jrmcduffie.com">
+              <picture>
+                <source srcset="assets/img/book_shelf.webp"
+                        type="image/webp">
+                <source srcset="assets/img/book_shelf.png"
+                        type="image/png">
+                <img class="img-responsive"
+                     src="assets/img/book_shelf.png"
+                     alt="Screenshot of the book shelf page. shows a list of books from the library">
+              </picture>
+            </a>
+          </p>
+          </div>
+          <div class="col-lg-3">
           <p>Book Shelf</p>
           <p>A simple application that pulls a random sample of books from my LibraryThing library of books.
             The application is build using React and Tailwind and is hosted with Netlify<br /><br />
@@ -392,9 +408,19 @@
 
       <div class="row">
         <div class="col-lg-5 col-lg-offset-2">
-          <p><a href="http://www.mcduffphysics.com"><img class="img-responsive"
-                   src="assets/img/website.JPG"
-                   alt="Screenshot of a classroom website landing page. List the subjects taught."></a></p>
+          <p>
+            <a href="http://www.mcduffphysics.com">
+              <picture>
+                <source srcset="assets/img/website.webp"
+                        type="image/webp">
+                <source srcset="assets/img/website.JPG"
+                        type="image/jpg">
+                <img class="img-responsive"
+                     src="assets/img/website.JPG"
+                     alt="Screenshot of a classroom website landing page. List the subjects taught.">
+              </picture>
+            </a>
+          </p>
         </div>
         <div class="col-lg-3">
           <p>MCDUFFPHYSICS.COM</p>
@@ -406,10 +432,17 @@
 
       <div class="row">
         <div class="col-lg-5 col-lg-offset-2">
-          <p><a href="http://www.calagator.org"><img class="img-responsive"
+          <p><a href="http://www.calagator.org">
+            <picture>
+              <source srcset="assets/img/calagator.webp" type="image/webp">
+              <source srcset="assets/img/calagator.png" type="image/png">
+              <img class="img-responsive"
                    src="assets/img/calagator.png"
-                   alt="Screenshot of the landing page for the open source software Calagator."></a></p>
-        </div>
+                   alt="Screenshot of the landing page for the open source software Calagator.">
+            </picture>
+            </a>
+          </p>
+          </div>
         <div class="col-lg-3">
           <p>Calagator.org</p>
           <p>I have been contributing to the development of the Calagator rails engine. Calagator is an open source
@@ -472,12 +505,13 @@
 
 
 
-  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
-
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
-  <script src="../assets/js/init.js"></script>
+
+  <script src="assets/js/bootstrap.js"></script>
+
+  <script src="assets/js/init.js"></script>
   <script>
     const canvas = document.getElementById('skillChart');
     canvas.style.backgroundColor = '#fff';
