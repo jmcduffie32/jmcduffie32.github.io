@@ -290,83 +290,8 @@
         <div class="col-lg-1 col-lg-offset-1">
           <h5>SKILLS</h5>
         </div>
-        <div class="col-lg-12">
-          <canvas id="skillChart"
-                  width="200"
-                  height="200"></canvas>
-          <script>
-            const canvas = document.getElementById('skillChart');
-            canvas.style.backgroundColor = '#fff';
-            const skills = [
-              // {name: 'Communication', level: 100 },
-              // {name: 'Problem Solving', level: 100 },
-              {name: 'javaScript', level: 100 },
-              {name: 'TypeScript', level: 100 },
-              {name: 'HTML/CSS (SASS)', level: 100 },
-              {name: 'Angular', level: 100 },
-              {name: 'Stencil', level: 100 },
-              {name: 'Vue', level: 80 },
-              {name: 'Python', level: 60 },
-              {name: 'React', level: 40 },
-              {name: 'ClojureScript', level: 40 },
-            ];
-
-            skillLevels = {
-              20: 'Read the Docs',
-              40: 'Used In Side Projects',
-              60: 'Used for Scripts at Job',
-              80: 'Used In Prodcution App',
-              100: 'Production Code with 10k+ daily Users',
-              110: 'The Best There Ever Was',
-            }
-            const myChart = new Chart(canvas, {
-              type: 'bar',
-              data: {
-                labels: skills.map(s => s.name),
-                datasets: [{
-                  label: null,
-                  data: skills.map(s => s.level),
-                  backgroundColor: [
-                    '#003f5c',
-                    '#2f4b7c',
-                    '#665191',
-                    '#a05195',
-                    '#d45087',
-                    '#f95d6a',
-                    '#ff7c43',
-                    '#ffa600',
-                    '#003f5c',
-                    '#2f4b7c',
-                    '#665191',
-                  ],
-                }]
-              },
-              options: {
-                layout: {
-                  padding: {
-                    left: 30,
-                    right: 30,
-                    top: 30,
-                    bottom: 30 
-                  }
-                },
-                legend: {
-                  display: false
-                },
-                scales: {
-                  yAxes: [{
-                    ticks: {
-                      beginAtZero: true,
-                      callback: function(value, index, values) {
-                        return skillLevels[value];
-                      },
-                      max: 110
-                    }
-                  }]
-                }
-              }
-            });
-          </script>
+        <div style="position: relative;height: 300px">
+          <canvas id="skillChart"></canvas>
         </div>
       </div>
 
@@ -475,7 +400,81 @@
   <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
   <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
   <script src="../assets/js/init.js"></script>
+  <script>
+    const canvas = document.getElementById('skillChart');
+    canvas.style.backgroundColor = '#fff';
+    const skills = [
+      // {name: 'Communication', level: 100 },
+      // {name: 'Problem Solving', level: 100 },
+      { name: 'javaScript', level: 100 },
+      { name: 'TypeScript', level: 100 },
+      { name: 'HTML/CSS (SASS)', level: 100 },
+      { name: 'Angular', level: 100 },
+      { name: 'Stencil', level: 100 },
+      { name: 'Vue', level: 80 },
+      { name: 'Python', level: 60 },
+      { name: 'React', level: 40 },
+      { name: 'ClojureScript', level: 40 },
+    ];
 
-</body>
-
-</html>
+    skillLevels = {
+      20: 'Read the Docs',
+      40: 'Used In Side Projects',
+      60: 'Used for Scripts at Job',
+      80: 'Used In Prodcution App',
+      100: 'Production Code with 10k+ daily Users',
+      110: 'The Best There Ever Was',
+    }
+    const myChart = new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: skills.map(s => s.name),
+        datasets: [{
+          label: null,
+          data: skills.map(s => s.level),
+          backgroundColor: [
+            '#003f5c',
+            '#2f4b7c',
+            '#665191',
+            '#a05195',
+            '#d45087',
+            '#f95d6a',
+            '#ff7c43',
+            '#ffa600',
+            '#003f5c',
+            '#2f4b7c',
+            '#665191',
+          ],
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 30,
+            right: 30,
+            top: 30,
+            bottom: 30
+          }
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              callback: function (value, index, values) {
+                return skillLevels[value];
+              },
+              max: 110
+            }
+          }]
+        }
+      }
+    });
+  </script>
+  
+  </body>
+  
+  </html>
